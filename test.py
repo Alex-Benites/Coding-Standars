@@ -28,11 +28,11 @@ class student:
         else:
             print("Invalid index")
 
-    def report(self):  # broken format
-        print("ID: " + self.id)
+    def report(self):
+        print("ID: " + str(self.id))
         print("Name is: " + self.name)
-        print("Grades Count: " + len(self.grades))
-        print("Final Grade = " + self.letter)
+        print("Grades Count: " + str(len(self.grades)))
+        print("Average Grade: " + str(self.calcaverage()))
 
 
 def startrun():
