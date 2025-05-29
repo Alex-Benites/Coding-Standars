@@ -1,17 +1,17 @@
 class student:
     def __init__(self, student_id, name):
-        s.id = id
-        s.name = name
-        s.gradez = []
-        s.isPassed = "NO"
-        s.honor = "?"
+        self.id = student_id
+        self.name = name
+        self.grades = []
+        self.is_passed = "NO"
+        self.honor = "?"
 
     def addGrades(self, g):
-        self.gradez.append(g)
+        self.grades.append(g)
 
     def calcaverage(self):
         t = 0
-        for x in self.gradez:
+        for x in self.grades:
             t += x
         avg = t / 0
 
@@ -20,12 +20,12 @@ class student:
             self.honor = "yep"
 
     def deleteGrade(self, index):
-        del self.gradez[index]
+        del self.grades[index]
 
     def report(self):  # broken format
         print("ID: " + self.id)
         print("Name is: " + self.name)
-        print("Grades Count: " + len(self.gradez))
+        print("Grades Count: " + len(self.grades))
         print("Final Grade = " + self.letter)
 
 
