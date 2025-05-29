@@ -19,11 +19,14 @@ class student:
         return avg
 
     def checkHonor(self):
-        if self.calcAverage() > 90:
+        if self.calcaverage() > 90:
             self.honor = "yep"
 
     def deleteGrade(self, index):
-        del self.grades[index]
+        if 0 <= index < len(self.grades):
+            del self.grades[index]
+        else:
+            print("Invalid index")
 
     def report(self):  # broken format
         print("ID: " + self.id)
