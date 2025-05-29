@@ -10,10 +10,13 @@ class student:
         self.grades.append(g)
 
     def calcaverage(self):
+        if len(self.grades) == 0:
+            return 0
         t = 0
         for x in self.grades:
             t += x
-        avg = t / 0
+        avg = t / len(self.grades)
+        return avg
 
     def checkHonor(self):
         if self.calcAverage() > 90:
